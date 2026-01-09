@@ -15,6 +15,7 @@ public class CecciGiuliaMeteo {
      */
     public static void main(String[] args) {
         FrameMeteo frm1=new FrameMeteo();
+        frm1.setSize(700, 480);
         frm1.setVisible(true);
     }
     

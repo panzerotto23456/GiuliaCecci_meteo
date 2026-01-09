@@ -32,11 +32,18 @@ public class FrameMeteo extends javax.swing.JFrame {
         btnAttuale = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         atxStampa = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(700, 480));
+        setMinimumSize(new java.awt.Dimension(700, 480));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblCitta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblCitta.setText("Città:");
+        getContentPane().add(lblCitta, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 115, 60, 40));
+        getContentPane().add(txtCitta, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 330, 20));
 
         btnPrevisione.setText("Previsioni a 5 giorni");
         btnPrevisione.addActionListener(new java.awt.event.ActionListener() {
@@ -44,6 +51,7 @@ public class FrameMeteo extends javax.swing.JFrame {
                 btnPrevisioneActionPerformed(evt);
             }
         });
+        getContentPane().add(btnPrevisione, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 380, 40));
 
         btnAttuale.setText("Meteo Attuale");
         btnAttuale.addActionListener(new java.awt.event.ActionListener() {
@@ -51,54 +59,23 @@ public class FrameMeteo extends javax.swing.JFrame {
                 btnAttualeActionPerformed(evt);
             }
         });
+        getContentPane().add(btnAttuale, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 380, 40));
 
         atxStampa.setColumns(20);
         atxStampa.setRows(5);
         jScrollPane1.setViewportView(atxStampa);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(54, 54, 54)
-                            .addComponent(txtCitta, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(lblCitta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(4, 4, 4)
-                            .addComponent(btnAttuale, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(4, 4, 4)
-                            .addComponent(btnPrevisione, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(4, 4, 4)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(4, 4, 4)
-                            .addComponent(txtCitta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(lblCitta))
-                    .addGap(9, 9, 9)
-                    .addComponent(btnAttuale, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(10, 10, 10)
-                    .addComponent(btnPrevisione, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(10, 10, 10)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 380, 150));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Immagini/meteo-09-01-2026-removebg-preview.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, -130, 660, 410));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Immagini/cieloblu.jpg"))); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(700, 480));
+        jLabel1.setMinimumSize(new java.awt.Dimension(700, 480));
+        jLabel1.setName(""); // NOI18N
+        jLabel1.setPreferredSize(new java.awt.Dimension(700, 480));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -191,6 +168,8 @@ public class FrameMeteo extends javax.swing.JFrame {
     private javax.swing.JTextArea atxStampa;
     private javax.swing.JButton btnAttuale;
     private javax.swing.JButton btnPrevisione;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCitta;
     private javax.swing.JTextField txtCitta;
